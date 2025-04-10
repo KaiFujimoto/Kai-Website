@@ -12,7 +12,7 @@ const MySkills: React.FC = () => {
 		"Bash"
 	];
 	return (
-		<div className="myskills">
+		<div className="inner-section">
 			<div className="title">
 				Languages
 			</div>

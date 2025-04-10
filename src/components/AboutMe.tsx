@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutMe: React.FC = () => {
 	return (
-		<div>
+		<div className="inner-section">
 			<div className="section title">
 				About Me
 			</div>
