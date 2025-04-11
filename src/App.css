@@ -4,6 +4,12 @@
 	height: 100%;
 }
 
+.app-body {
+	margin-bottom: 80px;
+	width: 50%;
+	justify-self: center;
+}
+
 .header {
 	display: inline-grid;
 	justify-content: center;
@@ -11,9 +17,12 @@
 	min-height: 40px;
 	padding: 10px;
 	text-align: center;
-	font-size: 30px;
+	font-size: 3em;
 }
 
+.subheader {
+	font-size: 0.5em;
+}
 .footer {
   position: fixed;
   height: 50px;
@@ -37,21 +46,16 @@
 
 .medium {
 	font-weight: normal;	
+	font-size: 1.5em;
 }
 
 .section {
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	font-size: 20px;
+	font-size: 1.75em;
 	padding: 10px 20px 5px 20px;
-	width: 50%;
 }
 
 .inner-section {
 	display: flex;
-  justify-content: center;
-	align-items: center;
 	flex-direction: column;
 }
 
@@ -59,27 +63,38 @@
 	text-align: justify;
 	text-justify: inter-word;
 	padding: 5px 20px 10px 20px;
-	font-size: 16px;
+	font-size: 1em;
 }
 
 .company-name {
 	font-weight: normal;
-	font-size: 18px;
+	font-size: 1.5em;
 }
 
 .job-title {
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 1em;
 	font-style: italic;
 }
 
 .employed-dates {
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 1em;
 }
 
 .item {
-	font-size: 14px;
+	font-size: 1em;
 	font-weight: normal;
 	padding: 3px;
+}
+
+.myskills {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	columns: 3;
+}
+
+.myskills > div {
+	margin: 20px;
 }

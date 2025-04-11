@@ -3,20 +3,18 @@ import axios from 'axios';
 import { Email } from '../constants/constants';
 
 interface EmailState {
-	sender: string;
-	title: string;
-	body: string;
-	status: string;
+	loading: boolean;
+	error: any | null;
+	successMessage: string;
 };
 
 const initialState: EmailState = {
-	body: "",
-	sender: "",
-	title: "",
-	status: ""
+	loading: false,
+	error: null,
+	successMessage: ''
 };
 
-export const sendEmail = createAsyncThunk('sendEmail', async () => {
+export const sendEmail = createAsyncThunk('sendEmail', async (formData: Email) => {
 //	const response = await axios.post(
 //		'lambda-url'
 //	);
@@ -26,28 +24,22 @@ export const sendEmail = createAsyncThunk('sendEmail', async () => {
 const emailSlice = createSlice({
 	name: 'email',
 	initialState,
-	reducers: {
-		emailSent: (state, action: PayloadAction<Email>) => {
-			state = {
-				body: "",
-				sender: "",
-				title: "",
-				status: ""
-			};
-		},
-	},
+	reducers: {},
 	extraReducers: builder => {
 		builder.addCase(sendEmail.pending, state => {
-			state.status = 'loading';
+			state.loading = true;
+			state.error = null;
+			state.successMessage = '';
 		})
 		.addCase(sendEmail.fulfilled, state => {
-			state.status = 'succeeded';
+			state.loading = false;
+			state.successMessage = "Email sent successfully! Typically takes me 1 day to respond back.";
 		})
-		.addCase(sendEmail.rejected, state => {
-			state.status = 'rejected';
+		.addCase(sendEmail.rejected, (state, action) => {
+			state.loading = false;
+			state.error = action.payload || "Failed to send email.";
 		})
 	},
 });
 
-export const { emailSent } = emailSlice.actions;
 export default emailSlice.reducer;

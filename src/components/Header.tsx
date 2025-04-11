@@ -6,7 +6,7 @@ const Header: React.FC = () => {
 			<div className="strong title">
 				Kai James Chen
 			</div>
-			<div className="body">
+			<div className="subheader">
 				Software Engineer - Golfer - Weightlifter - Dog Dad - Husbander
 			</div>
 		</div>
