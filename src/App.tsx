@@ -7,7 +7,7 @@ import AboutMe from './components/AboutMe';
 import EmailMe from './components/EmailMe';
 import MyExperience from './components/MyExperience';
 import MySkills from './components/MySkills';
-
+import MyEducation from './components/MyEducation';
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
 				<AboutMe />
 				<MyExperience />
 				<MySkills />
+				<MyEducation />
 				<EmailMe />
  			</div>
 			<Footer />
