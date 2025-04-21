@@ -11,11 +11,11 @@ const myEducation: React.FC = () => {
 		}
 	};
 	return (
-		<div>
+		<div className="inner-section">
 			<div className="section title">
 				My Education
 			</div>
-			<div>
+			<div className="section body">
 				{
 					Object.values(education).map( school => {
 						return (
