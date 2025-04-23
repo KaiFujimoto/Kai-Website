@@ -29,46 +29,52 @@ const EmailMe: React.FC = () => {
 	return (
 		<div className="inner-section">
 			<div className="section title">
-				Email Me!
+				Email Me
 			</div>
-			<form onSubmit={handleSubmit}>
-				<input
-					type="text"
-					name="name"
-					placeholder="Your Name"
-					value={formData.name}
-					onChange={handleChange}
-					required
-				/>
-				<input
-					type="email"
-					name="email"
-					placeholder="Your Email"
-					value={formData.email}
-					onChange={handleChange}
-					required
-				/>
-				<input
-					type="text"
-					name="subject"
-					placeholder="Subject"
-					value={formData.subject}
-					onChange={handleChange}
-					required
-				/>
-				<textarea
-					name="message"
-					placeholder="Your Message"
-					value={formData.message}
-					onChange={handleChange}
-					required
-				/>
-				<button type="submit" disabled={loading}>
-					{loading ? 'Sending...' : 'Send Email'}
-				</button>
-				{successMessage && <p style={{color: 'green' }}>{successMessage}</p>}
-				{error && <p style={{color: 'red'}}>{error}</p>}
-			</form>
+			<div className="inner body">
+				<form onSubmit={handleSubmit}>
+					<label>Your Name</label>
+					<input
+						type="text"
+						name="name"
+						placeholder="Your Name"
+						value={formData.name}
+						onChange={handleChange}
+						required
+					/>
+					<label>Your Email</label>
+					<input
+						type="email"
+						name="email"
+						placeholder="Your Email"
+						value={formData.email}
+						onChange={handleChange}
+						required
+					/>
+					<label>Subject</label>
+					<input
+						type="text"
+						name="subject"
+						placeholder="Subject"
+						value={formData.subject}
+						onChange={handleChange}
+						required
+					/>
+					<label>Message:</label>
+					<textarea
+						name="message"
+						placeholder="Your Message"
+						value={formData.message}
+						onChange={handleChange}
+						required
+					/>
+					<button type="submit" disabled={loading}>
+						{loading ? 'Sending...' : 'Send Email'}
+					</button>
+					{successMessage && <p style={{color: 'green' }}>{successMessage}</p>}
+					{error && <p style={{color: 'red'}}>{error}</p>}
+				</form>
+			</div>
 		</div>
 	);
 };
