@@ -97,6 +97,7 @@
 	flex-direction: row;
 	align-items: flex-start;
 	columns: 3;
+	flex-wrap: wrap;
 }
 
 .myskills > div {
