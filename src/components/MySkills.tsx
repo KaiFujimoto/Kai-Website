@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
-const MySkills: React.FC = () => {
+const MySkills = forwardRef<HTMLDivElement, {}>((props, ref) => {
 	const languages = [
 		"TypeScript",
 		"JavaScript",
@@ -56,7 +56,7 @@ const MySkills: React.FC = () => {
 		"Other Tools & Platforms": ToolsPlatforms
 	};
 	return (
-		<div className="inner-section">
+		<div ref={ref} className="inner-section">
 			<div className="section title">
 				My Skills
 			</div>
@@ -83,7 +83,7 @@ const MySkills: React.FC = () => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default MySkills;
 

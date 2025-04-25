@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
-const AboutMe: React.FC = () => {
+const AboutMe = forwardRef<HTMLDivElement, {}>((props, ref)  => {
 	return (
-		<div className="inner-section">
+		<div ref={ref} className="inner-section">
 			<div className="section title">
 				About Me
 			</div>
@@ -14,6 +14,6 @@ Outside of work, I’m a proud dog dad, dedicated husband, and avid golfer who a
 			</div>
 		</div>
 	);
-};
+});
 
 export default AboutMe;

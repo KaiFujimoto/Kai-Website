@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
-const MyExperience: React.FC = () => {
+const MyExperience = forwardRef<HTMLDivElement, {}>((props, ref) => {
 	const experienceList = [
 		{
 			"companyName": "Capital One",
@@ -38,7 +38,7 @@ const MyExperience: React.FC = () => {
 	];
 
 	return (
-		<div className="inner-section">
+		<div ref={ref} className="inner-section">
 			<div className="section title">
 				My Experience
 			</div>
@@ -73,7 +73,7 @@ const MyExperience: React.FC = () => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default MyExperience;
 

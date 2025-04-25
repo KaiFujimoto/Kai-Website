@@ -122,3 +122,14 @@ form > button {
 	margin-top: 10px;
 	width: 20%;
 }
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 10px;
+}
+
+nav > div {
+	cursor: pointer;
+}

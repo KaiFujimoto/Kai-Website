@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
-const myEducation: React.FC = () => {
+const myEducation = forwardRef<HTMLDivElement, {}>((props, ref) => {
 	const education = {
 		1: {
 			'name': 'University of Pennsylvania',
@@ -11,7 +11,7 @@ const myEducation: React.FC = () => {
 		}
 	};
 	return (
-		<div className="inner-section">
+		<div ref={ref} className="inner-section">
 			<div className="section title">
 				My Education
 			</div>
@@ -41,6 +41,6 @@ const myEducation: React.FC = () => {
 			</div>
 		</div>
 	);
-};
+});
 
 export default myEducation;
