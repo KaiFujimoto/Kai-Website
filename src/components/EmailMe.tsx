@@ -31,12 +31,13 @@ const EmailMe = forwardRef<HTMLDivElement, {}>((props, ref) => {
   };
 
   return (
-    <div className="inner-section" ref={ref}>
+    <div className="inner-section fade-in" ref={ref}>
       <div className="section title">Email Me</div>
       <div className="inner body">
         <form onSubmit={handleSubmit}>
-          <label>Your Name</label>
+          <label htmlFor="name">Your Name</label>
           <input
+            id="name"
             type="text"
             name="name"
             placeholder="Your Name"
@@ -44,8 +45,9 @@ const EmailMe = forwardRef<HTMLDivElement, {}>((props, ref) => {
             onChange={handleChange}
             required
           />
-          <label>Your Email</label>
+          <label htmlFor="email">Your Email</label>
           <input
+            id="email"
             type="email"
             name="email"
             placeholder="Your Email"
@@ -53,8 +55,9 @@ const EmailMe = forwardRef<HTMLDivElement, {}>((props, ref) => {
             onChange={handleChange}
             required
           />
-          <label>Subject</label>
+          <label htmlFor="subject">Subject</label>
           <input
+            id="subject"
             type="text"
             name="subject"
             placeholder="Subject"
@@ -62,8 +65,9 @@ const EmailMe = forwardRef<HTMLDivElement, {}>((props, ref) => {
             onChange={handleChange}
             required
           />
-          <label>Message:</label>
+          <label htmlFor="message">Message</label>
           <textarea
+            id="message"
             name="message"
             placeholder="Your Message"
             value={formData.message}
@@ -73,8 +77,10 @@ const EmailMe = forwardRef<HTMLDivElement, {}>((props, ref) => {
           <button type="submit" disabled={loading}>
             {loading ? "Sending..." : "Send Email"}
           </button>
-          {successMessage && <p style={{ color: "green" }}>{successMessage}</p>}
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {successMessage && (
+            <div className="form-message success">{successMessage}</div>
+          )}
+          {error && <div className="form-message error">{error}</div>}
         </form>
       </div>
     </div>

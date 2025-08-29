@@ -1,9 +1,9 @@
 import React, { forwardRef } from "react";
 
-const AboutMe = forwardRef<HTMLDivElement, {}>((props, ref) => {
+const CryptoFun = forwardRef<HTMLDivElement, {}>((props, ref) => {
   return (
     <div ref={ref} className="inner-section fade-in">
-      <div className="section title">About Me</div>
+      <div className="section title">CryptoFun</div>
       <div className="body">
         Detail-oriented Full-Stack Software Engineer with 6+ years of experience
         specializing in backend development, cloud architecture, and database
@@ -25,4 +25,4 @@ const AboutMe = forwardRef<HTMLDivElement, {}>((props, ref) => {
   );
 });
 
-export default AboutMe;
+export default CryptoFun;

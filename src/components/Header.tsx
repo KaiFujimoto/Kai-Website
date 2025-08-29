@@ -1,16 +1,14 @@
-import React from 'react';
+import React from "react";
 
 const Header: React.FC = () => {
-	return (
-		<div className="header" >
-			<div className="strong title">
-				Kai James Chen
-			</div>
-			<div className="subheader">
-				Software Engineer - Golfer - Weightlifter - Dog Dad - Husbander
-			</div>
-		</div>
-	);
-}
+  return (
+    <div className="header">
+      <div className="title">Kai James Chen</div>
+      <div className="subheader">
+        Software Engineer - Golfer - Weightlifter - Dog Dad - Husbander
+      </div>
+    </div>
+  );
+};
 
 export default Header;
