@@ -7,7 +7,6 @@ interface MenuBarProps {
     mySkills: React.RefObject<HTMLDivElement | null>;
     myEducation: React.RefObject<HTMLDivElement | null>;
     emailMe: React.RefObject<HTMLDivElement | null>;
-    cryptoFun: React.RefObject<HTMLDivElement | null>;
   };
 }
 
@@ -26,7 +25,6 @@ const MenuBar: React.FC<MenuBarProps> = ({ scrollToSections }) => {
       <div onClick={() => handleScroll("mySkills")}> My Skills </div>
       <div onClick={() => handleScroll("myEducation")}> My Education </div>
       <div onClick={() => handleScroll("emailMe")}> Email Me </div>
-      <div onClick={() => handleScroll("cryptoFun")}> Crypto Fun </div>
     </nav>
   );
 };
